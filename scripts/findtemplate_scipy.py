@@ -137,8 +137,8 @@ if args.pickleinput == True:
   try:
     templates_ulengths = pickle.load(templatefile_ulengths)
   except:
-    	sys.stderr.write('No ulen.p file found for database')
-	SystemExit()
+      sys.stderr.write('No ulen.p file found for database')
+      SystemExit()
   templates_descriptions = pickle.load(templatefile_descriptions)
 
 #
