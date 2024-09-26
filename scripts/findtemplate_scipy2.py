@@ -189,7 +189,7 @@ if args.inputfile != None:
         querydesc.append(re.sub(r"^[^\s]+\s","",line.strip()))
       elif fields[0][0] == "@":
         # Fasq file
-	if (i>0):
+        if (i>0):
 	  queryseq[-1] = ''.join(queryseqsegments)
         del queryseqsegments
         queryseqsegments = []
@@ -302,7 +302,7 @@ if args.pickleinput == True:
          templates_ulengths[template], template_tot_ulen, score, etta,
          Ntemplates, uquerymers, templateentries_tot[template],
          templates_lengths[template])
-	if p_corr <= evalue:
+        if p_corr <= evalue:
        		outputfile.write("%-12s\t%8s\t%8.3f\t%8.3f\t%4.1e\t%4.1e\t%4.1e\t%4.1e\t%8d\t%8d\t%s\n" % 
             		(template, score, expected, z, p_corr, frac_q, frac_d, coverage, templates_ulengths[template], uquerymers, templates_descriptions[template].strip()))
   else:
