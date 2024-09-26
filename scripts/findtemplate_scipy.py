@@ -179,7 +179,7 @@ if args.inputfile != None:
     if len(line)>1:
       if fields[0][0] == ">":
         if (i>0):
-	  queryseq[-1] = ''.join(queryseqsegments)
+          queryseq[-1] = ''.join(queryseqsegments)
         del queryseqsegments
         queryseqsegments = []
 	i=0
