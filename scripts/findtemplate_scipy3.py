@@ -190,7 +190,7 @@ if args.inputfile != None:
       elif fields[0][0] == "@":
         # Fasq file
         if (i>0):
-	  queryseq[-1] = ''.join(queryseqsegments)
+          queryseq[-1] = ''.join(queryseqsegments)
         del queryseqsegments
         queryseqsegments = []
 	i=0
