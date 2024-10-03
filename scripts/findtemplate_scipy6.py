@@ -203,7 +203,7 @@ if args.inputfile != None:
           fields=line.split()
           queryseqsegments.append("")
           queryseqsegments[i] = fields[0]
-	  i+=1
+          i+=1
           line = inputfile.next()
           line = inputfile.next()
 	except:
