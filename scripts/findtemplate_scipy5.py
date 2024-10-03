@@ -198,7 +198,7 @@ if args.inputfile != None:
         consensusseq.append("")
         queryname.append(fields[0][1:]) 
         querydesc.append(re.sub(r"^[^\s]+\s","",line.strip()))
-	try:
+        try:
           line = inputfile.next()
           fields=line.split()
           queryseqsegments.append("")
