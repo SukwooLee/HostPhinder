@@ -206,12 +206,12 @@ if args.inputfile != None:
           i+=1
           line = inputfile.next()
           line = inputfile.next()
-	except:
-	  break
+    except:
+      break
       else:
         queryseqsegments.append("")
         queryseqsegments[i] = fields[0]
-	i+=1
+    i+=1
   queryseq[-1] = ''.join(queryseqsegments)
 del queryseqsegments
 #
@@ -303,8 +303,8 @@ if args.pickleinput == True:
          Ntemplates, uquerymers, templateentries_tot[template],
          templates_lengths[template])
         if p_corr <= evalue:
-       		outputfile.write("%-12s\t%8s\t%8.3f\t%8.3f\t%4.1e\t%4.1e\t%4.1e\t%4.1e\t%8d\t%8d\t%s\n" % 
-            		(template, score, expected, z, p_corr, frac_q, frac_d, coverage, templates_ulengths[template], uquerymers, templates_descriptions[template].strip()))
+               outputfile.write("%-12s\t%8s\t%8.3f\t%8.3f\t%4.1e\t%4.1e\t%4.1e\t%4.1e\t%8d\t%8d\t%s\n" % 
+                    (template, score, expected, z, p_corr, frac_q, frac_d, coverage, templates_ulengths[template], uquerymers, templates_descriptions[template].strip()))
   else:
     templateentries2 = {}
     templateentries_tot2 = {}
@@ -312,18 +312,18 @@ if args.pickleinput == True:
     for submer in queryindex:
       if submer in templates:
         matches = templates[submer].split(",")
-	for match,score in sortedlist:
-	  #print match,score	
+    for match,score in sortedlist:
+      #print match,score    
           if match in matches:
-	    #print "gotcha"
+        #print "gotcha"
             Nhits2 += 1
             if match in templateentries2:
               templateentries2[match] += 1
-	      templateentries_tot2[match] += queryindex[submer]
+          templateentries_tot2[match] += queryindex[submer]
             else:
               templateentries2[match] = 1
-	      templateentries_tot2[match] = queryindex[submer]
-	    break
+          templateentries_tot2[match] = queryindex[submer]
+        break
     sortedlist2= sorted(templateentries2.items(), key = itemgetter(1), reverse=True)
     for template,score in sortedlist2:
       #outputfile.write("%s %s\n" % (template,score))
@@ -332,7 +332,7 @@ if args.pickleinput == True:
          templates_ulengths[template], template_tot_ulen, score, etta, 
          Ntemplates, uquerymers, templateentries_tot[template], 
          templates_lengths[template])
-	if p_corr <= evalue:
+    if p_corr <= evalue:
           outputfile.write("%-12s\t%8s\t%8.3f\t%8.3f\t%4.1e\t%4.1e\t%4.1e\t%4.1e\t%8d\t%8d\t%s\n" % 
             (template, score, expected, z, p_corr, frac_q, frac_d, coverage, templates_ulengths[template], uquerymers, templates_descriptions[template].strip()))
 #
