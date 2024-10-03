@@ -193,7 +193,7 @@ if args.inputfile != None:
           queryseq[-1] = ''.join(queryseqsegments)
         del queryseqsegments
         queryseqsegments = []
-	i=0
+        i=0
         queryseq.append("")
         consensusseq.append("")
         queryname.append(fields[0][1:]) 
