@@ -319,10 +319,10 @@ if args.pickleinput == True:
             Nhits2 += 1
             if match in templateentries2:
               templateentries2[match] += 1
-          templateentries_tot2[match] += queryindex[submer]
+              templateentries_tot2[match] += queryindex[submer]
             else:
               templateentries2[match] = 1
-          templateentries_tot2[match] = queryindex[submer]
+              templateentries_tot2[match] = queryindex[submer]
         break
     sortedlist2= sorted(templateentries2.items(), key = itemgetter(1), reverse=True)
     for template,score in sortedlist2:
