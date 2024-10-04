@@ -206,8 +206,8 @@ if args.inputfile != None:
           i+=1
           line = inputfile.next()
           line = inputfile.next()
-    except:
-      break
+        except:
+          break
       else:
         queryseqsegments.append("")
         queryseqsegments[i] = fields[0]
