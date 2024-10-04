@@ -323,7 +323,7 @@ if args.pickleinput == True:
             else:
               templateentries2[match] = 1
               templateentries_tot2[match] = queryindex[submer]
-        break
+    break
     sortedlist2= sorted(templateentries2.items(), key = itemgetter(1), reverse=True)
     for template,score in sortedlist2:
       #outputfile.write("%s %s\n" % (template,score))
